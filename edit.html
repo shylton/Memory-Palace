@@ -15,15 +15,17 @@
   <body style="font-family:Roboto Mono, monospace">
       <!-- header. will go into template file -->
       <header class="navbar bg-light">
-          <a href="new" class="btn btn-outline-primary d-block m-2">New Palace</a> <!-- link formatted as button to integrate with others -->
+          <a href="new.html" class="btn btn-outline-primary d-block m-2">New Palace</a> <!-- link formatted as button to integrate with others -->
           <form class="form-inline">
-              <select id="palaces_list" class="custom-select" style="min-width:200px">
-                  <option value="None"></option>
-              </select>
+            <select id="palaces_list" class="custom-select" style="min-width:200px">
+              <option value="None" selected disabled hidden>Select a Palace</option>
+              <option value = "palace1">palace 1</option>
+              <option value="palace2">palace 2</option>
+            </select>
               <!-- These will be buttons in final version, not links -->
-              <a href="edit" class="btn btn-outline-primary m-2" type="submit" value="view">View</a>
-              <a href="edit" class="btn btn-outline-primary m-2" type="submit" value="edit">Edit</a>
-              <a href="edit" class="btn btn-outline-danger m-2" type="submit" value="delete">Delete</a>
+              <a href="edit.html" class="btn btn-outline-primary m-2" type="submit" value="view">View</a>
+              <a href="edit.html" class="btn btn-outline-primary m-2" type="submit" value="edit">Edit</a>
+              <a href="edit.html" class="btn btn-outline-danger m-2" type="submit" value="delete">Delete</a>
           </form>
           <a class="nav-link" href="index.html">Home</a>
       </header>
