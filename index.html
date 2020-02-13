@@ -1,45 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <title>Browse Memory Palaces</title>
-  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <title>Browse Memory Palaces</title>
+</head>
+
+<body style="font-family:Roboto Mono, monospace">
+
   <body style="font-family:Roboto Mono, monospace">
-      <body style="font-family:Roboto Mono, monospace">
-          <!-- header. will go into template file -->
-          <header class="navbar bg-light">
-              <a href="new.html" class="btn btn-outline-primary d-block m-2">New Palace</a> <!-- link formatted as button to integrate with others -->
-              <form class="form-inline">
-                  <select id="palaces_list" class="custom-select" style="min-width:200px">
-                      <option value="None"></option>
-                  </select>
-                  <!-- These will be buttons in final version, not links -->
-                  <a href="edit.html" class="btn btn-outline-primary m-2" type="submit" value="view">View</a>
-                  <a href="edit.html" class="btn btn-outline-primary m-2" type="submit" value="edit">Edit</a>
-                  <a href="edit.html" class="btn btn-outline-danger m-2" type="submit" value="delete">Delete</a>
-              </form>
-              <a class="nav-link" href="index.html">Home</a>
-          </header>
+    <!-- header. will go into template file -->
+    <header class="navbar bg-light">
+      <a href="new.html" class="btn btn-outline-primary d-block m-2">New Palace</a> <!-- link formatted as button to integrate with others -->
+      <form class="form-inline">
+        <select id="palaces_list" class="custom-select" style="min-width:200px">
+          <option value="None" selected disabled hidden>Select a Palace</option>
+          <option value = "palace1">palace 1</option>
+          <option value="palace2">palace 2</option>
+        </select>
+        <!-- These will be buttons in final version, not links -->
+        <a href="edit.html" class="btn btn-outline-primary m-2" type="submit" value="view">View</a>
+        <a href="edit.html" class="btn btn-outline-primary m-2" type="submit" value="edit">Edit</a>
+        <a href="edit.html" class="btn btn-outline-danger m-2" type="submit" value="delete">Delete</a>
+      </form>
+      <a class="nav-link" href="index.html">Home</a>
+    </header>
 
-          <!-- main container -->
-          <div class="container">
+    <!-- main container -->
+    <div class="container">
 
-          <!-- ### Main Section ### -->
-          <main>
-              <article class="my-5">
-                  <h3>About</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </article>
-          </main>
-      </div> <!-- close top container -->
+      <!-- ### Main Section ### -->
+      <main>
+        <article class="my-5">
+          <h3>About</h3>
+          <p>The world record for memorization of the digits of the number pi is 100,000 digits. How can
+            such a feat be accomplished? Thru the memorization technique commonly referred to as
+            Memory Palaces.
+            The idea of a memory palace is that you choose a location (the palace) that you are familiar
+            with and place the numbers that need to be memorized in a predetermined path within
+            that palace. These “locations” are called loci. The path should be logical, allowing for an
+            ordered traversal, for example you may choose a path starting from the entrance of your
+            house and repeatedly turning to your left for the next “location”, like so: location one:
+            entrance, two: living room, three: kitchen etc. More details about memory palaces can be
+            found <a href ="https://en.wikipedia.org/wiki/Method_of_loci"> here.</a>
+            <p>Our webapp would create a tool for easily creating, editing and recalling memory palaces
+            specific to number memorization. We will use a person-action number system to create
+            mnemonics for every two digit combination from 00 to 99.</p>
+
+
+        </article>
+      </main>
+    </div> <!-- close top container -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -47,4 +65,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
+
 </html>
