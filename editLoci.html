@@ -45,18 +45,18 @@ another option for how we can display this data-->
           </div>
           <div class="form-group col-md-6">
             <label for="lociData">Data</label>
-            <input type="text" class="form-control" placeholder="2 to 4 digits">
+            <input type="text" class="form-control" placeholder="2 to 4 digits (can be null)">
           </div>
         </div>
 
         <div class="form-group">
             <label for="lociMnemo1">Mnemonic for first 2 digits of data</label>
-            <input type="text" class="form-control" placeholder="Mnemonic">
+            <input type="text" class="form-control" placeholder="Mnemonic (if data=null, must be null)">
 
         </div>
         <div class="form-group">
           <label for="lociMnemo1">Mnemonic for last 2 digits of data</label>
-          <input type="text" class="form-control" placeholder="Mnemonic">
+          <input type="text" class="form-control" placeholder="Mnemonic (if data=null, must be null)">
 
 
         </div>
@@ -72,6 +72,36 @@ another option for how we can display this data-->
   </div>
   </main>
   </div> <!-- close top container -->
+  <div class="container">
+    <form>
+      <h2>Current Mnemonics</h2>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label>Digits[00]</label>
+
+        </div>
+        <div class="form-group col-md-8">
+          <label>Mnemonic</label>
+          <input type="text"placeholder="Oliver Obeling">
+          <a href="editLoci.html" class="btn btn-outline-warning m-6" type="submit">Change Mnemonic</a>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label>Digits[01]</label>
+
+        </div>
+        <div class="form-group col-md-8">
+          <label>Mnemonic</label>
+          <input type="text"placeholder="">
+          <a href="editLoci.html" class="btn btn-outline-warning m-6" type="submit">Add Mnemonic</a>
+        </div>
+      </div>
+    </form>
+    <div>This would print for all mnemonics through 99</div>
+    <div>May end up going with a drop down menu to select the digits</div>
+
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
