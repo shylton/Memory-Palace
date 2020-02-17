@@ -33,10 +33,7 @@
   <!-- main container -->
   <div class="container">
     <!-- ### Main Section ### -->
-    <div>
-      <!--https://getbootstrap.com/docs/4.1/components/forms/
-another option for how we can display this data-->
-      <form>
+      <form class="my-3">
         <h2>[lociId here]</h2>
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -57,22 +54,13 @@ another option for how we can display this data-->
         <div class="form-group">
           <label for="lociMnemo1">Mnemonic for last 2 digits of data</label>
           <input type="text" class="form-control" placeholder="Shows existing mnemonic (if data=null, must be null)">
-
-
         </div>
-
-        <div class="row">
-          <div class="col"><!--spaceholder for aesthetics--></div>
-          <div class="col">
-            <a href="edit.html" class="btn btn-outline-success m-2">Submit Changes</a>
-          </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-outline-success mr-2">Update</button>
+            <button type="button" class="btn btn-outline-danger mr-2">Delete</button>
         </div>
-    </div>
     </form>
-  </div>
-  </main>
-  </div> <!-- close top container -->
-  <div class="container">
+
     <form>
       <h2>Current Mnemonics</h2>
       <div class="form-row">
@@ -101,7 +89,7 @@ another option for how we can display this data-->
     <div>This would print for all mnemonics through 99</div>
     <div>May end up going with a drop down menu to select the digits</div>
 
-  </div>
+  </div><!-- close top container -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
