@@ -24,8 +24,8 @@
         <option value="palace2">palace 2</option>
       </select>
       <!-- These will be buttons in final version, not links -->
-      <a href="edit.html" class="btn btn-outline-primary m-2" type="submit" value="view">View</a>
-      <a href="edit.html" class="btn btn-outline-danger m-2" type="submit" value="delete">Delete</a>
+      <a href="view.html" class="btn btn-outline-primary m-2" type="submit" value="view">View</a>
+      <a href="view.html" class="btn btn-outline-danger m-2" type="submit" value="delete">Delete</a>
     </form>
     <a class="nav-link" href="index.html">Home</a>
   </header>
@@ -33,71 +33,65 @@
   <!-- main container -->
   <div class="container">
     <!-- ### Main Section ### -->
-    <main class="m-5">
-      <h2>[Memory Palace Name goes here]</h2>
-      <div class="mb-3">
-        [memory palace description goes here]
-      </div>
-      <table style="width:150%">
-        <tr>
-          <th>LociId</th>
-          <th>Name</th>
-          <th>Data</th>
-          <th>Mnemonic</th>
-        </tr>
-        <tr>
-          <td id="lociid">loci1</td>
-          <td id="lociName">Entry Door</td>
-          <td id="lociData">1987</td>
-          <td>[mnemonic chosen by user to represent '19']</td>
-          <!--These will be buttons in final version, not links -->
-          <td><a href="editLoci.html" class="btn btn-outline-success m-2" type="submit">Insert Above</a>
-            <a href="editLoci.html" class="btn btn-outline-success m-2" type="submit">Insert Below</a>
-            <a href="editLoci.html" class="btn btn-outline-warning m-2" type="submit">Edit</a>
-            <button class="btn btn-outline-danger m-2" type="submit">Delete</button></td>
-        </tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>[mnemonic chosen by user to represent '87']</td>
-        <tr>
-          <td>loci2</td>
-          <td>Coat Rack</td>
-          <td>0506</td>
-          <td>[mnemonic chosen by user to represent '05']</td>
-          <td><a href="editLoci.html" class="btn btn-outline-success m-2" type="submit">Insert Above</a>
-            <a href="editLoci.html" class="btn btn-outline-success m-2" type="submit">Insert Below</a>
-            <a href="editLoci.html" class="btn btn-outline-warning m-2" type="submit">Edit</a>
-            <button class="btn btn-outline-danger m-2" type="submit">Delete</button></td>
-        </tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>[mnemonic chosen by user to represent '06']</td>
-      </table>
-      <div>
-        <!--https://getbootstrap.com/docs/4.1/components/forms/
-another option for how we can display this data
-        <form>
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="LociId">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Name">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Data">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Mnemonic">
-            </div>
+      <form class="my-3">
+        <h2>[lociId here]</h2>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="lociName">Name</label>
+            <input type="text" class="form-control" placeholder="lociName">
           </div>
-        </form>
-      -->
+          <div class="form-group col-md-6">
+            <label for="lociData">Data</label>
+            <input type="text" class="form-control" placeholder="2 to 4 digits (can be null)">
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lociMnemo1">Mnemonic for first 2 digits of data</label>
+            <input type="text" class="form-control" placeholder="Shows existing mnemonic (if data=null, must be null)">
+
+        </div>
+        <div class="form-group">
+          <label for="lociMnemo1">Mnemonic for last 2 digits of data</label>
+          <input type="text" class="form-control" placeholder="Shows existing mnemonic (if data=null, must be null)">
+        </div>
+        <div class="row justify-content-center">
+            <a href="view.html" class="btn btn-outline-success mr-2">Update</a>
+            <button type="button" class="btn btn-outline-danger mr-2">Delete</button>
+        </div>
+    </form>
+
+    <form>
+      <h2>Current Mnemonics</h2>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label>Digits[00]</label>
+
+        </div>
+        <div class="form-group col-md-8">
+          <label>Mnemonic</label>
+          <input type="text"placeholder="Ozzie Ozbourne">
+          <input type="text" placeholder="on a tombstone">
+          <a href="edit.html" class="btn btn-outline-warning m-6" type="submit">Change Mnemonic</a>
+        </div>
       </div>
-    </main>
-  </div> <!-- close top container -->
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label>Digits[01]</label>
+
+        </div>
+        <div class="form-group col-md-8">
+          <label>Mnemonic</label>
+          <input type="text"placeholder="[Person]">
+          <input type="text"placeholder="[Action]">
+          <a href="edit.html" class="btn btn-outline-warning m-6" type="submit">Add Mnemonic</a>
+        </div>
+      </div>
+    </form>
+    <div>This would print for all mnemonics through 99</div>
+    <div>May end up going with a drop down menu to select the digits</div>
+
+  </div><!-- close top container -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
